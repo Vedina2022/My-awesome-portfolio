@@ -1,0 +1,80 @@
+:root {
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
+  --branding-color: #f0aa1f;
+  --secondary-color: #001b2c;
+}
+body {
+  font-family: var(--default-font-family);
+}
+h1 {
+  font-family: var(--heading-font-family);
+  font-size: 86px;
+  font-weight: bold;
+}
+p {
+  font-weight: normal;
+}
+.introduction {
+  min-height: 100vh;
+  background: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.bubbles {
+  background: #0c192c;
+  position: relative;
+  display: flex;
+}
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even) {
+  background: #f0d04c;
+  box-shadow: 0 0 0 10px #ada15844, 0 0 50px #f0d04c, 0 0 100px #f0d04c;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+.greeting {
+  text-align: center;
+  padding: 140px 20px;
+  color: white;
+}
+.greeting p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+.greeting h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.btn-branding {
+  background: var(--branding-color);
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 12px 24px;
+}
